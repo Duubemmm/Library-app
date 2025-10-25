@@ -7,6 +7,37 @@
     <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
-   <script src="main.js"></script> 
+    <button class="new-book-button">Add New Book</button>
+    <!-- pop-up dialog box, containing a form -->
+<dialog id="newBookDialog">
+  <form method="dialog">
+    <p>
+      <label for="bookTitle">Book Title</label>
+      <input name="bookTitle" type="text" data-role="book-title"/>
+    </p>
+    <div>
+    <p>
+      <label for="bookAuthor">Book Author</label>
+      <input name="bookAuthor" type="text" data-role="book-author"/>
+    </p>
+    <p>
+      <label for="bookPages">Number of Pages</label>
+      <input name="bookTitle" type="text" data-role="number-of-pages"/>
+    </p>
+    <p>
+        <label>Read</label>
+        <input type="checkbox"/>
+
+        <label>Finished reading</label>
+        <input type="checkbox"/>
+    </p>
+    <div>
+      <button id="cancel" type="reset" class="cancel-button">Cancel</button>
+      <button type="submit" class="submit-button">Submit</button>
+    </div>
+  </form>
+</dialog>
+<div class="book-container"></div>
+    <script src="main.js"></script> 
 </body>
 </html>

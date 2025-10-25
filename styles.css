@@ -3,3 +3,17 @@
     padding: 0;
     box-sizing:border-box;
 }
+
+body{
+    margin: 0 auto;
+    width: 100vw;
+    padding: 10px;
+}
+
+#newBookDialog{
+   /* display: none; */
+   max-width: fit-content; 
+   padding:10px;
+   background-color: rgb(202, 199, 199);
+   border: none;
+}
