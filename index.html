@@ -7,8 +7,11 @@
     <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
-    <button class="new-book-button">Add New Book</button>
-    <!-- pop-up dialog box, containing a form -->
+   <header class="main-header">
+        <h1>My Library</h1>
+        <button class="new-book-button" id="addNewBookBtn">Add New Book</button>
+    </header>
+   
 <dialog id="newBookDialog">
   <form method="dialog">
     <p>
@@ -22,7 +25,7 @@
     </p>
     <p>
       <label for="bookPages">Number of Pages</label>
-      <input name="bookTitle" type="text" data-role="number-of-pages"/>
+      <input name="bookTitle" type="number" data-role="number-of-pages"/>
     </p>
     <p>
         <label>Read</label>
@@ -31,13 +34,13 @@
         <label>Finished reading</label>
         <input type="checkbox"/>
     </p>
-    <div>
+   <div class="dialog-buttons">
       <button id="cancel" type="reset" class="cancel-button">Cancel</button>
-      <button type="submit" class="submit-button">Submit</button>
+      <button type="submit" class="submit-button">Add Book</button>
     </div>
   </form>
 </dialog>
-<div class="book-container"></div>
+<main class="book-container"></main>
     <script src="main.js"></script> 
 </body>
-</html>
+</html> 

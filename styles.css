@@ -1,19 +1,151 @@
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing:border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-body{
-    margin: 0 auto;
-    width: 100vw;
-    padding: 10px;
+body {
+  background-color: #f8fafc; 
+  color: #0f172a; 
+  line-height: 1.6;
 }
 
-#newBookDialog{
-   /* display: none; */
-   max-width: fit-content; 
-   padding:10px;
-   background-color: rgb(202, 199, 199);
-   border: none;
+.main-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
+  margin-bottom: 2rem;
+}
+
+.new-book-button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #FFFFFF;
+  background-color: #2563eb; 
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.new-book-button:hover {
+  background-color: #1d4ed8; 
+  transform: translateY(-2px);
+}
+
+.book-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  padding: 0 2rem 2rem 2rem; 
+  max-width: 1400px;
+  margin: 0 auto; 
+}
+
+#newBookDialog {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  padding: 0;
+  width: 90%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+#newBookDialog::backdrop {
+  background-color: rgba(15, 23, 42, 0.5); 
+  backdrop-filter: blur(4px);
+}
+
+#newBookDialog form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding: 2.5rem;
+}
+
+#newBookDialog form p {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+#newBookDialog label {
+  font-weight: 500;
+  color: #334155;
+}
+
+#newBookDialog input[type="text"],
+#newBookDialog input[type="number"] {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 1rem;
+  background-color: #fdfdff;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+#newBookDialog input[type="text"]:focus,
+#newBookDialog input[type="number"]:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+#newBookDialog input[type="checkbox"] {
+  width: 1.15rem;
+  height: 1.15rem;
+  accent-color: #2563eb; 
+  cursor: pointer;
+}
+
+.dialog-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  margin-top: 1rem;
+  border-top: 1px solid #f1f5f9;
+  padding-top: 1.5rem;
+}
+
+.dialog-buttons button {
+  padding: 0.6rem 1.25rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.submit-button {
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.submit-button:hover {
+  background-color: #1d4ed8;
+}
+
+.cancel-button {
+  background-color: #e2e8f0; 
+  color: #334155;
+  border: 1px solid #cbd5e1;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.cancel-button:hover {
+  background-color: #cbd5e1;
 }
