@@ -149,3 +149,11 @@ body {
 .cancel-button:hover {
   background-color: #cbd5e1;
 }
+
+.card{
+  background-color: #dce6f0;
+  padding: 10px;
+  border-radius: 10px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: #0f172a;
+}
