@@ -15,7 +15,7 @@ function displayMyLibrary(){
         card.className = "book-card"   
         card.classList.add("card")     
         card.innerHTML = `
-            <h3>${book.title}</h3>
+            <h3>Book: ${book.title}</h3>
             <p>Author: ${book.author}</p>
             <p>Pages: ${book.bookPages}</p>
             <p>${book.readStatus ? "Read" : "Not Read"}</p>
@@ -38,12 +38,14 @@ bookContainer.addEventListener("click", (e) => {
 })
 
  // the constructor...
-function Book(title, author, bookPages, readStatus, id) {
+class Book {
+  constructor(title, author, bookPages, readStatus, id) {
     this.title = title
     this.author = author
     this.bookPages = bookPages
     this.readStatus = readStatus
     this.id = id
+  }
 }
 
 newBookBtn.addEventListener("click", () => {
